@@ -33,6 +33,7 @@
         android:layout_height="100dp"
         android:background="@drawable/play"
         android:layout_gravity="center"
+        android:onClick="play"
         />
     <View
         android:layout_width="wrap_content"

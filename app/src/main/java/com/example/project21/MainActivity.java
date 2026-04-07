@@ -1,5 +1,6 @@
 package com.example.project21;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         ImageButton playButton = findViewById(R.id.play);
         Drawable  playButtonBg = playButton.getBackground();
         playButtonBg.setFilterBitmap(false);
-
+    }
+    public void play(View view) {
+        Intent intent = new Intent(MainActivity.this, GameActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
