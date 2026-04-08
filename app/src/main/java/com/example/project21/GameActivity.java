@@ -64,7 +64,14 @@ public class GameActivity extends AppCompatActivity {
         startGame();
     }
     public void startGame(){
-
+        ImageButton standButton = findViewById(R.id.stand);
+        ImageButton hitButton = findViewById(R.id.hit);
+        standButton.setVisibility(View.VISIBLE);
+        Drawable standButtonBg = standButton.getBackground();
+        standButtonBg.setFilterBitmap(false);
+        hitButton.setVisibility(View.VISIBLE);
+        Drawable hitButtonBg = hitButton.getBackground();
+        hitButtonBg.setFilterBitmap(false);
 
         d_card1.setImageResource(getResources().getIdentifier("card_q", "drawable", getPackageName()));
         d_card1.getDrawable().setFilterBitmap(false);
@@ -79,7 +86,6 @@ public class GameActivity extends AppCompatActivity {
         dealerCards = new ImageView[]{
                 d_card1, d_card2, d_card3, d_card4, d_card5, d_card6
         };
-
         playerCards = new ImageView[]{
                 p_card1, p_card2, p_card3, p_card4, p_card5, p_card6
         };
@@ -92,7 +98,6 @@ public class GameActivity extends AppCompatActivity {
             imageView.getDrawable().setFilterBitmap(false);
             imageView.setVisibility(View.INVISIBLE);
         }
-
 
         dealersHiddenCard = drawDealerCard(allCards);
         d_card1.setVisibility(View.VISIBLE);
@@ -189,6 +194,10 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void roundEnd(){
+        ImageButton standButton = findViewById(R.id.stand);
+        ImageButton hitButton = findViewById(R.id.hit);
+        standButton.setVisibility(View.INVISIBLE);
+        hitButton.setVisibility(View.INVISIBLE);
         Toast.makeText(GameActivity.this, playerCardSum+" "+dealerCardSum, Toast.LENGTH_SHORT).show();
         d_card1.setImageResource(getResources().getIdentifier("card_" + dealersHiddenCard, "drawable", getPackageName()));
         d_card1.getDrawable().setFilterBitmap(false);
@@ -252,5 +261,4 @@ public class GameActivity extends AppCompatActivity {
         game_layout.setClickable(false);
         loss = false;
     }
-
 }
