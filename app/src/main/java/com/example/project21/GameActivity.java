@@ -64,6 +64,8 @@ public class GameActivity extends AppCompatActivity {
         startGame();
     }
     public void startGame(){
+
+
         d_card1.setImageResource(getResources().getIdentifier("card_q", "drawable", getPackageName()));
         d_card1.getDrawable().setFilterBitmap(false);
         Toast.makeText(GameActivity.this, roundNumber+"", Toast.LENGTH_SHORT).show();
@@ -73,7 +75,7 @@ public class GameActivity extends AppCompatActivity {
         visiblePlayerCardSum = 0;
         playerCardSum = 0;
         allCards = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,11));
-        checkAbilityToDraw();
+
         dealerCards = new ImageView[]{
                 d_card1, d_card2, d_card3, d_card4, d_card5, d_card6
         };
@@ -112,6 +114,7 @@ public class GameActivity extends AppCompatActivity {
         p_card2.getDrawable().setFilterBitmap(false);
         p_card2.setVisibility(View.VISIBLE);
         currentPlayerCard++;
+        checkAbilityToDraw();
     }
     public int drawPlayerCard(ArrayList<Integer> deck) {
         Random rand = new Random();
@@ -171,8 +174,14 @@ public class GameActivity extends AppCompatActivity {
         ImageButton hitButton = findViewById(R.id.hit);
         if(playerCardSum > 21){
             hitButton.setBackground(ContextCompat.getDrawable(this, R.drawable.hit_blocked));
+            Drawable hitButtonBg = hitButton.getBackground();
+            hitButtonBg.setFilterBitmap(false);
+
         } else if (playerCardSum == 21) {
             hitButton.setBackground(ContextCompat.getDrawable(this, R.drawable.hit_perfect));
+            Drawable hitButtonBg = hitButton.getBackground();
+            hitButtonBg.setFilterBitmap(false);
+
         }
         else{
             hitButton.setBackground(ContextCompat.getDrawable(this, R.drawable.hit));
@@ -210,9 +219,13 @@ public class GameActivity extends AppCompatActivity {
     }
     public void win(){
         LinearLayout game_layout = findViewById(R.id.game);
-        if(roundNumber != 5){
+        if(roundNumber != 2){
             roundNumber += 1;
             game_layout.setClickable(true);
+        }else{
+            Intent intent = new Intent(GameActivity.this, WinActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
     public void loss(){

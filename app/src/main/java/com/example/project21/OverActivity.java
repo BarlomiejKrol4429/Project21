@@ -14,7 +14,7 @@ public class OverActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actity_over);
+        setContentView(R.layout.activity_over);
 
         LinearLayout game_layout = findViewById(R.id.over);
         ImageView gameOver = findViewById(R.id.game_over);

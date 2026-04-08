@@ -15,6 +15,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".OverActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".WinActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
