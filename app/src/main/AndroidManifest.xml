@@ -13,6 +13,8 @@
         android:theme="@style/Theme.Project21">
         <activity android:name=".GameActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".OverActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

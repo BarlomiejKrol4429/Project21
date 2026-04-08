@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OverActivity"
+    android:id="@+id/over"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/game_over_menu"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"/>
+    <ImageView
+        android:id="@+id/game_over"
+        android:layout_width="270dp"
+        android:layout_height="132dp"
+        android:src="@drawable/game_over"
+        android:layout_gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"/>
+    <ImageButton
+        android:id="@+id/restart"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:background="@drawable/restart"
+        android:layout_gravity="center"
+        android:onClick="play"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"/>
 </LinearLayout>

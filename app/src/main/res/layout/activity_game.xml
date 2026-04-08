@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/table_21"
-    tools:context=".GameActivity">
+    tools:context=".GameActivity"
+    android:onClick="continueGame">
 
     <View
         android:layout_width="match_parent"
