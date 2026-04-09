@@ -75,7 +75,7 @@ public class GameActivity extends AppCompatActivity {
 
         d_card1.setImageResource(getResources().getIdentifier("card_q", "drawable", getPackageName()));
         d_card1.getDrawable().setFilterBitmap(false);
-        Toast.makeText(GameActivity.this, roundNumber+"", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(GameActivity.this, roundNumber+"", Toast.LENGTH_SHORT).show();
         currentPlayerCard = 0;
         currentDealerCard = 0;
         dealerCardSum = 0;
@@ -197,7 +197,7 @@ public class GameActivity extends AppCompatActivity {
         ImageButton hitButton = findViewById(R.id.hit);
         standButton.setVisibility(View.INVISIBLE);
         hitButton.setVisibility(View.INVISIBLE);
-        Toast.makeText(GameActivity.this, playerCardSum+" "+dealerCardSum, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(GameActivity.this, playerCardSum+" "+dealerCardSum, Toast.LENGTH_SHORT).show();
         d_card1.setImageResource(getResources().getIdentifier("card_" + dealersHiddenCard, "drawable", getPackageName()));
         d_card1.getDrawable().setFilterBitmap(false);
         boolean playerBust = playerCardSum > 21;
