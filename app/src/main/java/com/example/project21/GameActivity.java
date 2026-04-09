@@ -120,6 +120,7 @@ public class GameActivity extends AppCompatActivity {
         p_card2.setVisibility(View.VISIBLE);
         currentPlayerCard++;
         checkAbilityToDraw();
+        showRoundText();
     }
     public int drawPlayerCard(ArrayList<Integer> deck) {
         Random rand = new Random();
@@ -158,9 +159,7 @@ public class GameActivity extends AppCompatActivity {
         if(gameInputsEnabled){
             if (playerCardSum < 21) {
                 int card = drawPlayerCard(allCards);
-                playerCards[currentPlayerCard].setImageResource(
-                        getResources().getIdentifier("card_" + card, "drawable", getPackageName())
-                );
+                playerCards[currentPlayerCard].setImageResource(getResources().getIdentifier("card_" + card, "drawable", getPackageName()));
                 playerCards[currentPlayerCard].getDrawable().setFilterBitmap(false);
                 playerCards[currentPlayerCard].setVisibility(View.VISIBLE);
                 currentPlayerCard++;
@@ -228,7 +227,7 @@ public class GameActivity extends AppCompatActivity {
     }
     public void win(){
         LinearLayout game_layout = findViewById(R.id.game);
-        if(roundNumber != 2){
+        if(roundNumber != 7){
             roundNumber += 1;
             game_layout.setClickable(true);
         }else{
@@ -260,5 +259,23 @@ public class GameActivity extends AppCompatActivity {
         }
         game_layout.setClickable(false);
         loss = false;
+    }
+    private void showRoundText() {
+        ImageView roundText = findViewById(R.id.roundText);
+        int resId = getResources().getIdentifier(
+                "round" + roundNumber,
+                "drawable",
+                getPackageName()
+        );
+        roundText.setImageResource(resId);
+        roundText.getDrawable().setFilterBitmap(false);
+        roundText.setAlpha(0f);
+        roundText.setVisibility(View.VISIBLE);
+        roundText.animate().alpha(1f).setDuration(300).withEndAction(() -> {
+                    roundText.postDelayed(() -> {
+                        roundText.animate().alpha(0f).setDuration(300).withEndAction(() -> {
+                            roundText.setVisibility(View.INVISIBLE);}).start();
+                    }, 1000);
+                }).start();
     }
 }

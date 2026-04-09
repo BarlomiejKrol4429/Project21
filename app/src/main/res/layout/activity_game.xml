@@ -1,217 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/game"
-    android:orientation="vertical"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/table_21"
-    tools:context=".GameActivity"
-    android:onClick="continueGame">
+    android:layout_height="match_parent">
 
-    <View
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/game"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card1"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_q"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card2"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card3"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card4"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card5"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/d_card6"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
+        android:background="@drawable/table_21"
+        tools:context=".GameActivity"
+        android:onClick="continueGame">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card1"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_q"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card2"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card3"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card4"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card5"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/d_card6"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card1"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
+            android:layout_weight="9"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card2"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card3"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card4"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card5"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/p_card6"
-            android:layout_width="44dp"
-            android:layout_height="64dp"
-            android:src="@drawable/card_1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
+            android:layout_weight="9"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9.4">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card1"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card2"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card3"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card4"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card5"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/p_card6"
+                android:layout_width="44dp"
+                android:layout_height="64dp"
+                android:src="@drawable/card_1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="9"/>
 
-        <ImageButton
-            android:id="@+id/stand"
-            android:layout_width="104dp"
-            android:layout_height="42dp"
-            android:background="@drawable/stand"
-            android:onClick="stand"
-            android:layout_gravity="bottom"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9.4">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"/>
+
+            <ImageButton
+                android:id="@+id/stand"
+                android:layout_width="104dp"
+                android:layout_height="42dp"
+                android:background="@drawable/stand"
+                android:onClick="stand"
+                android:layout_gravity="bottom"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="11"/>
+            <ImageButton
+                android:id="@+id/hit"
+                android:layout_width="72dp"
+                android:layout_height="42dp"
+                android:background="@drawable/hit"
+                android:onClick="hit"
+                android:layout_gravity="bottom"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"/>
+
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="11"/>
-        <ImageButton
-            android:id="@+id/hit"
-            android:layout_width="72dp"
-            android:layout_height="42dp"
-            android:background="@drawable/hit"
-            android:onClick="hit"
-            android:layout_gravity="bottom"/>
-        <View
+            android:layout_weight="12.5"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="9"/>
+            android:layout_weight="5">
 
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="12.5"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="5">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 
+        </LinearLayout>
     </LinearLayout>
 
-
-</LinearLayout>
+    <ImageView
+        android:id="@+id/roundText"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="130dp"
+        android:layout_gravity="center"
+        android:src="@drawable/round1"
+        android:visibility="invisible"/>
+</FrameLayout>
